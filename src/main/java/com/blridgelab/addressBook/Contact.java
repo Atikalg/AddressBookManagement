@@ -1,5 +1,7 @@
 package com.blridgelab.addressBook;
-
+/* author atik
+* contact details 
+ */
 public class Contact {
     //variable
     private String firstName;
