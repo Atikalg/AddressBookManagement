@@ -38,4 +38,16 @@ public class Address {
         String str = contact.getFirstName();
         System.out.println("str = " + str);
     }
+    public void editContact() {
+        System.out.println("Please Enter original first name to edit : ");
+        String editName = sc.nextLine();
+
+        if(editName.equalsIgnoreCase(contact.getFirstName())) {
+            addContact();
+        } else {
+            System.out.println("Invalid first name");
+            System.out.println("Please Enter valid first name");
+            editContact();
+        }
+    }
 }
