@@ -1,6 +1,6 @@
 package com.blridgelab.addressBook;
 /* author atik
-* contact details 
+* contact details of person
  */
 public class Contact {
     //variable
@@ -11,8 +11,9 @@ public class Contact {
     private String city;
     private String state;
     private String pincode;
+
     //constructor
-    public Contact() {
+    public Contact(String firstName, String lastName, String phoneNumber, String city, String state, String pincode, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.phoneNumber = phoneNumber;
