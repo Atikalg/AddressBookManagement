@@ -103,7 +103,7 @@ public class Address {
             }
    }
         // Function for operations of user's choice
-        public void getmenu() {
+        public void getmenu(Address Address) {
             System.out.println("Menu of Address Book");
             boolean check = false;
             do {
