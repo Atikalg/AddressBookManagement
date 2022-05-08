@@ -16,7 +16,7 @@ public class AddressBookDirectory {
 		do {
 			System.out.println("\nChoose the operation on the Directory you want to perform");
 			System.out.println(
-					"1.Add an Address Book\n2.Edit Existing Address Book\n3.Display Address book Directory\n4.Search Person By Regionn\n5.View People By Region\n6.Exit Address book System");
+					"1.Add an Address Book\n2.Edit Existing Address Book\n3.Display Address book Directory\n4.Search Person By Region\n5.View People By Region\n6.Count People By Region\n7.Exit Address book System");
 
 			switch (sc.nextInt()) {
 			case 1:
@@ -39,10 +39,18 @@ public class AddressBookDirectory {
 			case 5:
 				System.out.println("Enter \n1.Display By City\n2.Display By State");
 				int displayChoice = sc.nextInt();
-				if(displayChoice==1)
+				if (displayChoice == 1)
 					displayPeopleByRegion(AddressBook.city);
-				else 
+				else
 					displayPeopleByRegion(AddressBook.state);
+				break;
+			case 6:
+				System.out.println("Enter \n1.Display By City\n2.Display By State");
+				int countChoice = sc.nextInt();
+				if(countChoice==1)
+					countPeopleByRegion(AddressBook.city);
+				else 
+					countPeopleByRegion(AddressBook.state);
 				break;
 			default:
 				moreChanges = false;
@@ -140,6 +148,22 @@ public class AddressBookDirectory {
 						.filter(person -> person.getAddress().getState().equals(regionName)
 								|| person.getAddress().getCity().equals(regionName)))
 				.forEach(person -> person.forEach(personDetails -> System.out.println(personDetails)));
+	}
+
+	/*
+	 * counting persons by City or State
+	 */
+	public void countPeopleByRegion(HashMap<String, ArrayList<Contact>> listToDisplay) {
+
+		System.out.println("Enter the name of the region :");
+		String regionName = sc.next();
+
+		long countPeople = listToDisplay.values().stream()
+				.map(region -> region.stream().filter(person -> person.getAddress().getState().equals(regionName)
+						|| person.getAddress().getCity().equals(regionName)))
+				.count();
+
+		System.out.println("Number of People residing in " + regionName + " are: " + countPeople + "\n");
 	}
 
 	/*
