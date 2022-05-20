@@ -1,53 +1,112 @@
 package com.bridgelab.AddressBook;
 
 public class Contact {
-	private String firstName, lastName, email;
-    private long phoneNumber;
-    Address address;
+	 private String firstName, lastName, email;
+	    private long phoneNumber;
+	    private String city, state;
+	    private long zip;
 
-    public String getFirstName() {
-        return firstName;
-    }
+	    /**
+	     * @return the firstName
+	     */
+	    public String getFirstName() {
+	        return firstName;
+	    }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	    /**
+	     * @param firstName the firstName to set
+	     */
+	    public void setFirstName(String firstName) {
+	        this.firstName = firstName;
+	    }
 
-    public String getLastName() {
-        return lastName;
-    }
+	    /**
+	     * @return the lastName
+	     */
+	    public String getLastName() {
+	        return lastName;
+	    }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	    /**
+	     * @param lastName the lastName to set
+	     */
+	    public void setLastName(String lastName) {
+	        this.lastName = lastName;
+	    }
 
-    public String getEmail() {
-        return email;
-    }
+	    /**
+	     * @return the email
+	     */
+	    public String getEmail() {
+	        return email;
+	    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	    /**
+	     * @param email the email to set
+	     */
+	    public void setEmail(String email) {
+	        this.email = email;
+	    }
 
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
+	    /**
+	     * @return the phoneNumber
+	     */
+	    public long getPhoneNumber() {
+	        return phoneNumber;
+	    }
 
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
+	    /**
+	     * @param phoneNumber the phoneNumber to set
+	     */
+	    public void setPhoneNumber(long phoneNumber) {
+	        this.phoneNumber = phoneNumber;
+	    }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
+	    /**
+	     * @return the city
+	     */
+	    public String getCity() {
+	        return city;
+	    }
 
-    public Address getAddress() {
-        return address;
-    }
+	    /**
+	     * @param city the city to set
+	     */
+	    public void setCity(String city) {
+	        this.city = city;
+	    }
 
-    @Override
-    public String toString() {
-        return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", phoneNumber="
-                + phoneNumber + " , "+ address + "]";
-    }
+	    /**
+	     * @return the state
+	     */
+	    public String getState() {
+	        return state;
+	    }
+
+	    /**
+	     * @param state the state to set
+	     */
+	    public void setState(String state) {
+	        this.state = state;
+	    }
+
+	    /**
+	     * @return the zip
+	     */
+	    public long getZip() {
+	        return zip;
+	    }
+
+	    /**
+	     * @param zip the zip to set
+	     */
+	    public void setZip(long zip) {
+	        this.zip = zip;
+	    }
+
+	    @Override
+	    public String toString() {
+	        return "firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", phoneNumber=" + phoneNumber
+	                + ", city=" + city + ", state=" + state + ", zip=" + zip;
+	    }
 }
